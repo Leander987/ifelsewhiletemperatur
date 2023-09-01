@@ -23,7 +23,7 @@ namespace TemperaturIfElseWhile
             while (parse == false) 
             { 
                 tekst = Console.ReadLine();
-                parse = int.TryParse(tekst, out temperatur);
+                parse = int.TryParse(tekst, out temperatur); ///////
 
                 if (parse == false)
                 {
