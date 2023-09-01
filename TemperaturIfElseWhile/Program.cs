@@ -10,6 +10,50 @@ namespace TemperaturIfElseWhile
     {
         static void Main(string[] args)
         {
+
+            string tekst;
+            int temperatur;
+            bool parse = false;
+
+
+
+            //loop
+            Console.WriteLine("Tast inn en temperatur, et heltall");
+
+            while (parse == false) 
+            { 
+                tekst = Console.ReadLine();
+                parse = int.TryParse(tekst, out temperatur);
+
+                if (parse == false)
+                {
+                    Console.WriteLine("Ugyldig verdi. Tast inn et heltall");
+                }
+                else//det vil si det motsatte av det som er i if'en (parse==true)
+                {
+                    if (temperatur < 0)
+                    {
+                        Console.WriteLine("Minusgrader");
+                    }
+                    else if (temperatur == 0)
+                    {
+                        Console.WriteLine("Null grader");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Plussgrader");
+                    }
+                }
+            }
+            //loop slutt
+            
+            Console.ReadLine();
+     
+          
+
+
+
+
             //Clone dette prosjektet.
 
             //oppgave1 - her brukes if/else int.Parse()/TryParse()
